@@ -7,26 +7,26 @@
 <center>
 <img src="localizacion.jpg" width="300" height="150">
 </center>
-<h2>La geolocalizaciÛn es la capacidad de conocer la posiciÛn geogr·fica 
-(coordenadas) o ubicaciÛn de un 
-objeto: telÈfono, tableta, ordenador, cocheÖ
-Actualmente la gran mayorÌa posee al menos un aparato que puede proporcionar 
-esta informaciÛn: el telÈfono mÛvil. 
-Cualquier tipo de telÈfono mÛvil, sea Smartphone o no, puede ser localizado, 
+<h2>La geolocalizaci√≥n es la capacidad de conocer la posici√≥n geogr√°fica 
+(coordenadas) o ubicaci√≥n de un 
+objeto: tel√©fono, tableta, ordenador, coche‚Ä¶
+Actualmente la gran mayor√≠a posee al menos un aparato que puede proporcionar 
+esta informaci√≥n: el tel√©fono m√≥vil. 
+Cualquier tipo de tel√©fono m√≥vil, sea Smartphone o no, puede ser localizado, 
 ya que contamos con varios modos de geolocalizar.</h2>
-<h3>Tipos de geolocalizaciÛn:</h3>
+<h3>Tipos de geolocalizaci√≥n:</h3>
 <h4>GPS
-Hace ya varios aÒos que los dispositivos telefÛnicos incorporan receptores de GPS.
-GPS o Sistema de Posicionamiento Global es una red compuesta por al menos 30 satÈlites
+Hace ya varios a√±os que los dispositivos telef√≥nicos incorporan receptores de GPS.
+GPS o Sistema de Posicionamiento Global es una red compuesta por al menos 30 sat√©lites
 que orbitan alrededor de la Tierra.
-Al menos 4 de estos satÈlites estÈn visibles para nuestro dispositivo y cada satÈlite emite 
-una seÒal sobre su ubicaciÛn cada cierto tiempo. Teniendo en cuenta la latitud, longitud, altura 
-y tiempo se calcula la ubicaciÛn. Cuantos m·s satÈlites tomen parte en el proceso, m·s exacto ser· 
-esta triangulaciÛn.</h4>
+Al menos 4 de estos sat√©lites est√©n visibles para nuestro dispositivo y cada sat√©lite emite 
+una se√±al sobre su ubicaci√≥n cada cierto tiempo. Teniendo en cuenta la latitud, longitud, altura 
+y tiempo se calcula la ubicaci√≥n. Cuantos m√°s sat√©lites tomen parte en el proceso, m√°s exacto ser√° 
+esta triangulaci√≥n.</h4>
 <link rel="manifest" href="/manifest.json">
     <meta charset="utf-8">
-    <meta name="description" content="Google Maps GeocodificaciÛn simple">
-    <title>Google Maps GeocodificaciÛn simple</title>
+    <meta name="description" content="Google Maps Geocodificaci√≥n simple">
+    <title>Google Maps Geocodificaci√≥n simple</title>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false&language=es"></script>
 <style type="text/css">
 html,body{margin-top:1%;padding:0;width:100%;height:500px;font-family:Trebuchet MS,verdana,arial;background-color:blue;}
@@ -54,10 +54,10 @@ window.onload = function () {
  
 function codeAddress() {
   var address = document.getElementById('address').value;
-  // FunciÛn completa de Geocoding
+  // Funci√≥n completa de Geocoding
   geocoder.geocode({
     'address': address
-// 'latLng': latlng si lo que queremos ejecutar en geocodificaciÛn inversa
+// 'latLng': latlng si lo que queremos ejecutar en geocodificaci√≥n inversa
   }, function (results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       document.getElementById('x').innerHTML = results[0].geometry.location.lat().toFixed(6);
@@ -76,7 +76,7 @@ function codeAddress() {
     }
 // Se detallan los diferentes tipos de error
 else {
-      alert('Geocode no tuvo Èxito por la siguiente razÛn: ' + status)
+      alert('Geocode no tuvo √©xito por la siguiente raz√≥n: ' + status)
     }
   })
 };
@@ -87,10 +87,10 @@ else {
   <div id="container">
     <!--al introducir los datos obtendremos las coordenadas (LatLng )que nos permite cambiar  var latlng para personalizar nuestro mapa -->
 <section id="texto">
-  <h3>DirecciÛn a localizar</h3>
-  <!--se inserta la direcciÛn completa que queremos mostrar en el mapa-->
-  <p>Sobreescriba la direcciÛn<br>puede indicar coordenadas lat,lng separadas por coma (,):</p>
-      <input id="address" type="textbox" size="38" maxlength="80" value="" placeholder="DirecciÛn o Lat, Lng" />
+  <h3>Direcci√≥n a localizar</h3>
+  <!--se inserta la direcci√≥n completa que queremos mostrar en el mapa-->
+  <p>Sobreescriba la direcci√≥n<br>puede indicar coordenadas lat,lng separadas por coma (,):</p>
+      <input id="address" type="textbox" size="38" maxlength="80" value="" placeholder="Direcci√≥n o Lat, Lng" />
       <br>
 	  <!--nos devuelve la latitud-->
       Latitud: <span style="color:red;" id="x"></span>
@@ -99,7 +99,7 @@ else {
       Longitud: <span style="color:red;" id="y"></span>
       <br>
 	    <!--nos devuelve la direcion completa-->
-      DirecciÛn completa:<br><span style="color:blue;" id="direccion"></span>
+      Direcci√≥n completa:<br><span style="color:blue;" id="direccion"></span>
       <br>
       <input type="button" class="navi" value="Localizar" onclick="codeAddress()">
     </section>
